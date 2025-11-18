@@ -1,13 +1,32 @@
 # IPL Score Predictor
 This Streamlit webapp enables user to predict total runs between teams using current runs and wickets.
-**Algorithms used:**
-* Linear Regression
-* K-Nearest Neighbor Regressor 
-* XGBoost Regressor
-* RandomForest Regressor
-* SVR
-* Decision Tree Regressor
+## Libraries Used
 
+import streamlit as st
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LinearRegression
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.svm import SVR
+import xgboost as xgb
+import optuna
+import pickle
+
+---
+
+## Algorithms Implemented
+
+1. Linear Regression
+2. K-Nearest Neighbors Regressor (KNN)
+3. XGBoost Regressor
+4. Random Forest Regressor
+5. Decision Tree Regressor
+6. Support Vector Regressor (SVR)
 **Hyperparamter Optimization:**
 
 Used optuna for paramter optimization.
@@ -33,3 +52,5 @@ Dataset Used: ipl_data.csv
 * stricker - batsman playing as main 1
 * non-striker - batsman playing as runner up - not main 0
 * total - total score (target variable)
+
+Used streamlit web frame work
